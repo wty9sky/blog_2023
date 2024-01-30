@@ -5,7 +5,7 @@ editLink: false
 lastUpdated: false
 showComment: false
 showDate: false
-date: 2023年12月3日 13:34:12
+date: 2023-12-03 13:34:12
 ---
 
 # Rust 入门
