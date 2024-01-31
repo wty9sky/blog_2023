@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /categories/issues/index
+      link: /categories/index
     - theme: alt
       text: 在 GitHub 查看
       link: https://github.com/wty9sky/wty9sky.github.io
