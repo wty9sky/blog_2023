@@ -1,5 +1,5 @@
 ---
-title: JavaScript的原型与原型链
+title: 手写Promise
 aside: true
 editLink: false
 lastUpdated: false
