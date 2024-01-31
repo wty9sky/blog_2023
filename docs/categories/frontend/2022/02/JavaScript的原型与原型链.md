@@ -1,7 +1,0 @@
----
-title: JavaScript的原型与原型链
-aside: true
-editLink: false
-lastUpdated: false
-showComment: false
----

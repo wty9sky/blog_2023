@@ -6,7 +6,8 @@ lastUpdated: false
 showComment: false
 ---
 
-<img width=100% src="../public/img/svg/about-me-header.svg" alt="头部图" />
+<img width=100% src="../public/img/svg/about-repos-header.svg" alt="头部图" />
+
 <p align="center">
   <a href="https://wty9sky.github.io/" target="_blank" style="display: inline-block;">
     <img alt="个人主页" src="https://img.shields.io/badge/知识库-九天-lightblue?logo=blogger&logoColor=lightblue" />
@@ -17,7 +18,7 @@ showComment: false
         <a href="https://github.com/swdwiki" target="_blank" style="display: inline-block;">
         <img alt="GitHub个人主页" src="https://img.shields.io/badge/GitHub-swdwiki-lightblue?logo=github" />
     </a>&nbsp;
-    <a href="https://juejin.cn/user/685744115170142" target="_blank" style="display: inline-block;">
+    <a href="https://juejin.cn/user/1363050148675016" target="_blank" style="display: inline-block;">
         <img alt="掘金个人主页" src="https://img.shields.io/badge/掘金-九天-1E80FF" />
     </a>&nbsp;
 </p>
@@ -28,6 +29,12 @@ showComment: false
 - 🔭 全栈开发
 - 📫 我的邮箱: [xmsn2014@126.com](mailto:xmsn2014@126.com)
 <!-- - 📖 My motto: “东隅已逝，桑榆非晚。” -->
+
+---
+
+笔者的知识库是关于个人碎片化、结构化、体系化技术知识内容的记录。和大多数人一样，笔者也希望这些内容能被个人再次利用，哪怕没有，也希望能为 “有缘人” 或是后继者增加一些实际靠谱的个人技术经验。
+
+杂乱的内容会引起笔者思绪上的混乱，被迫转移注意力，所以笔者尽可能的在各种方面定期进行整理、折腾，将知识整理好，不用再担心知识在记忆中遗忘，不用再担心掌握的知识无迹可寻，这样笔者就可以获得思绪上的梳理、 “放下”，可以更好的 “轻装前行”。
 
 ---
 

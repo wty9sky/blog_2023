@@ -1,8 +1,13 @@
 
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:1;position:relative" width="854" height="180" viewBox="0 0 854 180">
-                <style>
-                            .text {
-						font-size: 30px;
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="z-index:1;position:relative" width="854" height="180" viewBox="0 0 854 180">
+<style>
+.text {
+font-size: 30px;
+font-weight: 700;
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+.text_small {
+						font-size: 15px;
 						font-weight: 700;
 						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 					}
@@ -12,6 +17,15 @@
 						font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
 					}
                             .text, .desc {
+							animation: twinkling 4s ease-in-out infinite;
+						}@keyframes twinkling {
+						  40% { opacity: 1; }
+						  50% { opacity: 0.5; }
+						  60% { opacity: 1; }
+						  70% { opacity: 0.5; }
+						  80% { opacity: 1; }
+						};
+						.text_small, .desc {
 							animation: twinkling 4s ease-in-out infinite;
 						}@keyframes twinkling {
 						  40% { opacity: 1; }
@@ -32,7 +46,11 @@
             </path>
                 </g>
                 
-                        <text text-anchor="middle" alignment-baseline="middle" x="50%" y="35%" class="text" style="fill:#fff;" stroke="#none" stroke-width="1" >关于知识库 (九天の知识仓库)</text>
-                 
+                        <text text-anchor="middle" alignment-baseline="middle" x="50%" y="25%" class="text" style="fill:#fff;" stroke="#none" stroke-width="1" >
+						九天的个人技术知识库
+						</text>
+						<text font-size="12" text-anchor="middle" alignment-baseline="middle" x="50%" y="50%" class="text_small" style="fill:#fff;" stroke="#none" stroke-width="0.5" >
+						 📝 记录和分享个人碎片化、结构化、体系化的技术知识内容
+						</text>
             </svg>
         
