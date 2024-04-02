@@ -6,11 +6,18 @@ lastUpdated: false
 showComment: false
 ---
 
+<!-- <div>个人简历下载</div> -->
+<a href="http://files.swdwiki.com/tos-cn-i-8vrofckkw9/wty/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91_%E7%8E%8B%E5%A4%A9%E6%B4%8B.pdf" target="_blank" class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
+<icon-file-pdf :size="16" />
+<span class="text-[12px]">简历附件</span>
+<icon-download :size="14" />
+</a>
+
 # 联系方式
 
 - 微信号：xmsn90 <a-tag size="small" color="#165dff">推荐</a-tag>
 - Email： xmsn2014@126.com
-- 手机：18158642329<a href="#其他说明">(建议短信联系)</a>
+- 手机：18158642329<a href="#其他说明">(请短信联系，原因详见其他说明)</a>
 
 # 个人信息
 
@@ -107,7 +114,7 @@ showComment: false
 
 ## 其他说明
 
-本人为听力残疾人，目前暂未佩戴助听器，无法接听电话，可正常面对面对话沟通。
+本人为听力残疾人，目前暂未佩戴助听器，无法接听电话，可视频沟通，可正常面对面对话沟通。
 
 ## 致谢
 

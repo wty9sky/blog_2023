@@ -20,8 +20,16 @@ export const nav: DefaultTheme.Config["nav"] = [
     activeMatch: "/categories/",
   },
   {
+    text: "开发日志",
+    items: [
+      { text: "MD富文本编辑器", link: "/develop/editor/index", activeMatch: "/develop/editor" },
+    ],
+    activeMatch: "/develop/",
+  },
+  {
     text: "学习笔记",
     items: [
+      { text: "React", link: "/notes/react/index", activeMatch: "/notes/react" },
       { text: "Rust", link: "/notes/rust/index", activeMatch: "/notes/rust" },
       { text: "Vue3", link: "/notes/vue3/index", activeMatch: "/notes/vue3" },
     ],

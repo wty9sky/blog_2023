@@ -63,5 +63,5 @@ jobs:
       - name: Deploy GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          BRANCH: pages
-          FOLDER: docs/.vitepress/dist
+          branch: pages
+          folder: docs/.vitepress/dist

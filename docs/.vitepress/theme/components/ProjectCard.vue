@@ -1,46 +1,32 @@
 <script setup lang="ts">
 import { defineOptions, defineProps, reactive, ref } from "vue";
+import { Project } from "./type";
 
 defineOptions({
   name: "ProjectList",
 });
+const projectVisible = ref(false);
 
-const selectProject = (index) => {
+const selectProject = () => {
   projectVisible.value = true;
-  selectProjectIndex.value = index;
 };
 
-defineProps({
-  projects: {
-    type: Array<any>,
-    default: () => {
-      return [];
-    },
-  },
-  games: {
-    type: Array<any>,
-    default: () => {
-      return [];
-    },
-  },
-  ais: {
-    type: Array<any>,
-    default: () => {
-      return [];
-    },
-  },
-});
+interface Props {
+  project: Project;
+}
 
-const selectProjectIndex = ref(0);
-const projectVisible = ref(false);
+const props = withDefaults(defineProps<Props>(), {});
 </script>
 
 <template>
   <div>
-    <a-modal v-model:visible="projectVisible" :footer="false" width="800px">
-      <template #title>
-        项目详情 - {{ projects[selectProjectIndex].name }}
-      </template>
+    <a-modal
+      v-model:visible="projectVisible"
+      :footer="false"
+      width="800px"
+      @cancel="projectVisible = false"
+    >
+      <template #title> 项目详情 - {{ props.project.name }} </template>
       <div>
         <div
           class="border-gray-200 border-solid border group px-3 py-2 transition bg-gray-100 rounded-xl hover:scale-100 hover:opacity-100 relative flex flex-col items-start justify-start"
@@ -56,32 +42,29 @@ const projectVisible = ref(false);
                 height="36"
                 decoding="async"
                 class="h-9 w-9 rounded-full"
-                :src="projects[selectProjectIndex].icon"
+                :src="props.project.icon"
                 style="color: transparent"
               />
             </div>
             <span
               class="pl-3 -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
             /><span class="relative text-sm z-10 font-bold">{{
-              projects[selectProjectIndex].name
+              props.project.name
             }}</span>
             <div class="tags my-2 ml-2">
               <a-tag
                 color="arcoblue"
                 class="mr-2"
-                v-for="(tag, index) of projects[selectProjectIndex].tags"
+                v-for="(tag, index) of props.project.tags"
                 :key="index"
                 >{{ tag }}</a-tag
               >
             </div>
           </div>
           <span
-            class="leading-5 relative z-10 mt-1 px-1 text-sm text-zinc-600 dark:text-zinc-400"
+            class="leading-5 relative z-10 mt-1 px-1 text-sm text-zinc-600 dark:text-zinc-200"
           >
-            <span
-              class="text-xs"
-              v-html="projects[selectProjectIndex].desc"
-            ></span>
+            <span class="text-xs" v-html="props.project.desc"></span>
           </span>
         </div>
         <div
@@ -93,21 +76,18 @@ const projectVisible = ref(false);
               <span
                 class="dark:text-gray-500 text-sm text-gray-400 flex flex-row flex-wrap justify-between items-center"
               >
-                {{ projects[selectProjectIndex].time }}
+                {{ props.project.time }}
               </span>
             </div>
             <div
               class="flex flex-row justify-left items-center my-2"
-              v-if="projects[selectProjectIndex].showUrl"
+              v-if="props.project.showUrl"
             >
               <span class="mr-2 my-1 text-base">项目传送门</span>
               <div
                 class="text-sm flex flex-row flex-wrap justify-between items-center"
               >
-                <div
-                  v-for="(url, index) in projects[selectProjectIndex].url"
-                  :key="index"
-                >
+                <div v-for="(url, index) in props.project.url" :key="index">
                   <a
                     v-if="url.type === 'url'"
                     target="_blank"
@@ -115,7 +95,7 @@ const projectVisible = ref(false);
                     class="flex flex-row justify-start items-center cursor-pointer mr-3 text-sm"
                   >
                     <span
-                      class="dark:text-gray-500 text-sm relative z-40 flex items-center text-zinc-400 transition hover:-translate-y-0.5 hover:text-lime-600 dark:text-zinc-200 dark:hover:text-lime-400"
+                      class="dark:text-gray-500 text-sm relative z-40 flex items-center text-zinc-500 transition hover:-translate-y-0.5 hover:text-lime-600 dark:text-zinc-200 dark:hover:text-lime-400"
                     >
                       <span class="mr-2">{{ url.name }}</span
                       ><svg
@@ -167,9 +147,9 @@ const projectVisible = ref(false);
             <div
               class="flex flex-row justify-left items-center mb-2"
               v-if="
-                projects[selectProjectIndex].openSource &&
-                projects[selectProjectIndex].gitUrls &&
-                projects[selectProjectIndex].gitUrls.length !== 0
+                props.project.openSource &&
+                props.project.gitUrls &&
+                props.project.gitUrls.length !== 0
               "
             >
               <span class="mr-2 my-1 text-base">仓库地址</span>
@@ -177,13 +157,13 @@ const projectVisible = ref(false);
                 class="flex flex-col flex-wrap justify-between items-center"
               >
                 <a
-                  v-for="(url, index) in projects[selectProjectIndex].gitUrls"
+                  v-for="(url, index) in props.project.gitUrls"
                   :key="index"
                   target="_blank"
                   :href="url.url"
                   class="flex flex-row justify-start items-center cursor-pointer mr-3"
                   ><span
-                    class="dark:text-gray-500 relative z-40 flex items-center text-zinc-400 transition hover:-translate-y-0.5 hover:text-lime-600 dark:text-zinc-200 dark:hover:text-lime-400"
+                    class="dark:text-gray-500 relative z-40 flex items-center text-zinc-500 transition hover:-translate-y-0.5 hover:text-lime-600 dark:text-zinc-200 dark:hover:text-lime-400"
                   >
                     <icon-github />
                     <span class="mx-2">{{ url.url }}</span>
@@ -194,213 +174,60 @@ const projectVisible = ref(false);
           </div>
           <div class="">
             <a
-              v-if="projects[selectProjectIndex].log"
-              :href="projects[selectProjectIndex].log"
+              v-if="props.project.log"
+              :href="props.project.log"
               class="relative z-40 text-sm flex items-center text-zinc-500 transition hover:text-gray-600"
-              >项目开发日志
+              >开发日志
               <icon-double-right />
             </a>
           </div>
         </div>
       </div>
     </a-modal>
-    <div class="mx-auto bg-white dark:bg-gray-900">
-      <div class="relative">
-        <div class="mx-auto lg:max-w-5xl">
-          <header class="max-w-4xl">
-            <h2
-              class="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
-            >
-              我的<b class="text-3xl ml-2">过去</b>·<b class="text-4xl">现在</b
-              >·<b class="text-5xl mr-2">未来</b>项目之旅。
-            </h2>
-            <p class="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              多年来，我参与或主导过各种各样的项目，包括<b>开源</b>、<b>实验</b>、
-              <b>独立开发</b
-              >，下面是经过筛选觉得还不错的项目，也是我在技术领域中尝试和探索的见证。
-            </p>
-          </header>
-          <div class="mt-8" v-if="projects && projects.length !== 0">
-            <div class="text-center mt-4 my-2"><h2>前端&全栈开发</h2></div>
-            <ul
-              style="padding-left: 0"
-              role="list"
-              class="pl-10 grid grid-cols-2 gap-x-4 gap-y-4"
-            >
-              <li
-                @click="selectProject(index)"
-                v-for="(project, index) in projects"
-                :key="index"
-                class="border-gray-200 border-solid border hover:border-gray-400 group px-3 py-4 transition hover:bg-gray-100 rounded-xl hover:scale-100 hover:opacity-100 relative flex flex-col items-start justify-start mt-2"
-              >
-                <div
-                  class="relative z-10 flex h-12 items-center justify-center"
-                >
-                  <div
-                    class="relative z-10 flex h-12 items-center justify-center w-12 h-12 rounded-full"
-                  >
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width="36"
-                      height="36"
-                      decoding="async"
-                      class="h-9 w-9 rounded-full"
-                      :src="project.icon"
-                      style="color: transparent"
-                    />
-                  </div>
-                  <div class="flex flex-col justify-center items-start">
-                    <span
-                      class="pl-3 -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                    /><span class="relative z-10 font-bold">{{
-                      project.name
-                    }}</span>
-                    <span class="text-gray-400 text-sm font-medium">{{
-                      project.time
-                    }}</span>
-                  </div>
-                </div>
-                <span
-                  class="leading-7 relative z-10 mt-3 px-1 text-sm text-zinc-600 dark:text-zinc-400"
-                >
-                  <span
-                    class="line-clamp-4"
-                    style="height: 119px"
-                    v-html="project.desc"
-                  ></span>
-                </span>
-                <div class="w-full h-8 tags my-2 overflow-hidden">
-                  <a-tag
-                    size="small"
-                    color="arcoblue"
-                    class="mr-2 my-1"
-                    v-for="(tag, index) of project.tags"
-                    :key="index"
-                    >{{ tag }}</a-tag
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-8" v-if="games && games.length !== 0">
-            <div class="text-center mt-4 my-2"><h2>游戏开发</h2></div>
-            <ul
-              style="padding-left: 0"
-              role="list"
-              class="pl-10 grid grid-cols-2 gap-x-4 gap-y-4"
-            >
-              <li
-                @click="selectProject(index)"
-                v-for="(project, index) in projects"
-                :key="index"
-                class="border-gray-200 border-solid border hover:border-gray-400 group px-3 py-4 transition hover:bg-gray-100 rounded-xl hover:scale-100 hover:opacity-100 relative flex flex-col items-start justify-start mt-2"
-              >
-                <div
-                  class="relative z-10 flex h-12 items-center justify-center"
-                >
-                  <div
-                    class="relative z-10 flex h-12 items-center justify-center w-12 h-12 rounded-full"
-                  >
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width="36"
-                      height="36"
-                      decoding="async"
-                      class="h-9 w-9 rounded-full"
-                      :src="project.icon"
-                      style="color: transparent"
-                    />
-                  </div>
-                  <span
-                    class="pl-3 -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                  /><span class="relative z-10 font-bold">{{
-                    project.name
-                  }}</span>
-                </div>
-                <span
-                  class="leading-7 relative z-10 mt-3 px-1 text-sm text-zinc-600 dark:text-zinc-400"
-                >
-                  <span
-                    class="line-clamp-4"
-                    style="height: 119px"
-                    v-html="project.desc"
-                  ></span>
-                </span>
-                <div class="w-full h-8 tags my-2 overflow-hidden">
-                  <a-tag
-                    size="small"
-                    color="arcoblue"
-                    class="mr-2 my-1"
-                    v-for="(tag, index) of project.tags"
-                    :key="index"
-                    >{{ tag }}</a-tag
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="mt-8" v-if="ais && ais.length !== 0">
-            <div class="text-center mt-4 my-2">
-              <h2>人工智能&深度学习开发</h2>
-            </div>
-            <ul
-              style="padding-left: 0"
-              role="list"
-              class="pl-10 grid grid-cols-2 gap-x-4 gap-y-4"
-            >
-              <li
-                @click="selectProject(index)"
-                v-for="(project, index) in projects"
-                :key="index"
-                class="border-gray-200 border-solid border hover:border-gray-400 group px-3 py-4 transition hover:bg-gray-100 rounded-xl hover:scale-100 hover:opacity-100 relative flex flex-col items-start justify-start mt-2"
-              >
-                <div
-                  class="relative z-10 flex h-12 items-center justify-center"
-                >
-                  <div
-                    class="relative z-10 flex h-12 items-center justify-center w-12 h-12 rounded-full"
-                  >
-                    <img
-                      alt=""
-                      loading="lazy"
-                      width="36"
-                      height="36"
-                      decoding="async"
-                      class="h-9 w-9 rounded-full"
-                      :src="project.icon"
-                      style="color: transparent"
-                    />
-                  </div>
-                  <span
-                    class="pl-3 -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
-                  /><span class="relative z-10 font-bold">{{
-                    project.name
-                  }}</span>
-                </div>
-                <span
-                  class="leading-7 relative z-10 mt-3 px-1 text-sm text-zinc-600 dark:text-zinc-400"
-                >
-                  <span
-                    class="line-clamp-4 h-[120px]"
-                    v-html="project.desc"
-                  ></span>
-                </span>
-                <div class="w-full h-8 tags my-2 overflow-hidden">
-                  <a-tag
-                    size="small"
-                    color="arcoblue"
-                    class="mr-2 my-1"
-                    v-for="(tag, index) of project.tags"
-                    :key="index"
-                    >{{ tag }}</a-tag
-                  >
-                </div>
-              </li>
-            </ul>
-          </div>
+    <div @click="selectProject">
+      <div class="relative z-10 flex h-12 items-center justify-start">
+        <div
+          class="relative z-10 flex h-12 items-center justify-center w-12 h-12 rounded-full"
+        >
+          <img
+            alt=""
+            loading="lazy"
+            width="36"
+            height="36"
+            decoding="async"
+            class="h-9 w-9 rounded-full"
+            :src="props.project.icon"
+            style="color: transparent"
+          />
         </div>
+        <div class="flex flex-col justify-center items-start">
+          <span
+            class="pl-3 -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"
+          /><span class="relative z-10 font-bold dark:text-zinc-200">{{
+            props.project.name
+          }}</span>
+          <span class="text-gray-400 text-sm font-medium">{{
+            props.project.time
+          }}</span>
+        </div>
+      </div>
+      <span
+        class="leading-7 relative z-10 block my-[10px] text-sm text-zinc-600 dark:text-zinc-200"
+      >
+        <span
+          class="line-clamp-4 min-h-[120px]"
+          v-html="props.project.desc"
+        ></span>
+      </span>
+      <div class="w-full h-8 tags my-2 overflow-hidden">
+        <a-tag
+          size="small"
+          color="arcoblue"
+          class="mr-2 my-1"
+          v-for="(tag, index) of props.project.tags"
+          :key="index"
+          >{{ tag }}</a-tag
+        >
       </div>
     </div>
   </div>

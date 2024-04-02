@@ -16,4 +16,14 @@ export default defineConfig({
       'mermaid': 'mermaid/dist/mermaid.esm.mjs',
     },
   },
+  build:{
+    rollupOptions:{
+      output:{
+        manualChunks:{
+          'vue-vender':['vue'],
+          // 'library':['']
+        }
+      }
+    }
+  }
 });
