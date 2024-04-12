@@ -24,7 +24,7 @@ import myk from '../public/img/myk.png';
 
 
 const companyProjects = {
-  label: '主导&参与公司项目',
+  label: '主导公司项目',
   list:[{
   label: '每日互动科技有限公司',
   value: 'tezx',
@@ -64,7 +64,7 @@ const companyProjects = {
       showUrl: false,
       openSource: false,
       time: '2022年1月-2023年7月',
-      tags: ['中后台', '微前端','微服务', 'SDK管理'],
+      tags: ['中后台', '微前端','微服务','Vue','Golang'],
       log: '/projects/01-泰尔卓信/02-泰尔卓信综合平台'
     },
     {
@@ -87,7 +87,7 @@ const companyProjects = {
 },{
   label:'黑龙江盛世雪城科技有限公司',
   value:'ssxc',
-  time: "2022年1月-2023年7月",
+  time: "2022年1月-2022年1月",
   projects: [{
   name:'牡丹江海浪飞机场综合平台',
   desc:'本项目是基于牡丹江海浪飞机场原有官网、管理平台等需求重构改造，并开发安卓、iOS应用以及小程序，为海浪飞机场内部人员提供管理日常工作、机场维护等机场日常工作的平台。',
@@ -104,26 +104,29 @@ const companyProjects = {
    log:'/projects/02-盛世雪城/01-牡丹江海浪飞机场管理平台'
 },{
   name:'牡丹江防疫控制管理平台',
-  desc:'在入职<b>盛世雪城</b>工作时期内，主导负责的第一个项目，通过迭代与重构开发，在疫情时期为牡丹江地区防疫提供较大助力，同时通过该项目逐渐落地确定开发组后续项目的主要开发技术路线与规范。',
+  desc:'在入职<b>盛世雪城</b>工作时期内，以开发组副组长身份主导负责的第一个项目，通过迭代与重构开发，在疫情时期为牡丹江地区防疫提供较大助力，同时通过该项目逐渐落地确定开发组后续项目的主要开发技术路线与开发规范。',
   icon:myk,
   showUrl:true,
   time:'2020年2月-2022年11月',
+  openSource:false,
   url:[{
     type:'minapp',
   name: "访问牡疫控小程序",
   url: "./img/myk_ewm.jpg",
   }],
-  openSource:false,
   tags:['后台','小程序','Serverless','重构'],
    log:'/projects/02-盛世雪城/03-牡疫控平台'
 },]
 }],
 };
-
-const openProjects = {
-  label:'参与开源&独立开发',
+const smallProjects = {
+  label:'参与项目',
+  list:[{}]
+}
+const personProjects = {
+  label:'独立开发',
   list: [{
-    label:'全栈开发&APP开发',
+    label:'全栈应用',
   value: 'tezx',
   time: "2022年1月-2023年7月",
   projects:[
@@ -252,6 +255,35 @@ const openProjects = {
 }
   ]
   },{
+    label:'独立App',
+  value: 'tezx',
+  time: "2022年1月-至今",
+  projects:[{
+  name:'Earthworm英语学习工具',
+  desc:'在入职<b>盛世雪城</b>工作时期内，主导负责的第一个项目，通过迭代与重构开发，在疫情时期为牡丹江地区防疫提供较大助力，同时通过该项目逐渐落地确定开发组后续项目的主要开发技术路线与规范。',
+  icon:myk,
+  showUrl:true,
+  time:'2020年2月-2022年10月',
+  url:[{
+    type:'url',
+  name: "Earthworm官网",
+  url: "https://earthworm.cuixueshe.com/",
+  }],
+  openSource:true,
+    gitUrls:[{
+    name:'Github',
+    url:'https://github.com/cuixueshe/earthworm'
+  }],
+  tags:['Nuxtjs','Nestjs'],
+   log:'/projects/05-参与开源/01-earthworm'
+},]
+  }]
+};
+
+const openProjects = {
+  label:'开源项目',
+  list: [
+    {
     label:'参与开源',
   value: 'tezx',
   time: "2022年1月-至今",
@@ -278,7 +310,7 @@ const openProjects = {
 };
 
 
-const projects = [companyProjects,openProjects];
+const projects = [companyProjects,smallProjects,personProjects,openProjects];
 </script>
 
 <style scoped>
@@ -290,5 +322,8 @@ const projects = [companyProjects,openProjects];
 }
 .content{
   width: 1104px;
+}
+:deep(.arco-tabs-nav-tab){
+  @apply justify-center items-center;
 }
 </style>

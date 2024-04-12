@@ -2,15 +2,15 @@ import type { DefaultTheme } from "vitepress";
 
 export const nav: DefaultTheme.Config["nav"] = [
   {
-    text: "日志",
+    text: "文章",
     items: [
       {
-        text: "前端开发",
+        text: "前端",
         link: "/categories/frontend/index",
         activeMatch: "/categories/frontend/",
       },
       {
-        text: "后端开发",
+        text: "后端",
         link: "/categories/backend/index",
         activeMatch: "/categories/backend/",
       },
@@ -36,18 +36,21 @@ export const nav: DefaultTheme.Config["nav"] = [
     activeMatch: "/notes/",
   },
   {
-    text: "我的项目",
+    text: "项目之旅",
     link: "/projects/index",
     activeMatch: "/projects",
   },
   {
-    text: "个人简历",
+    text: "简历",
     link: "/resume",
     activeMatch: "/resume",
   },
   {
     text: "关于",
-    items: [{ text: "关于我", link: "/about/me", activeMatch: "/about/me" }],
+    items: [
+      { text: "关于我", link: "/about/me", activeMatch: "/about/me" },
+      { text: "版本历程", link: "/about/version", activeMatch: "/about/version" }
+    ],
     activeMatch: "/about/me",
   },
 ];

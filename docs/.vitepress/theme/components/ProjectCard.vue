@@ -177,7 +177,7 @@ const props = withDefaults(defineProps<Props>(), {});
               v-if="props.project.log"
               :href="props.project.log"
               class="relative z-40 text-sm flex items-center text-zinc-500 transition hover:text-gray-600"
-              >开发日志
+              >项目心得
               <icon-double-right />
             </a>
           </div>
