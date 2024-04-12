@@ -15,15 +15,5 @@ export default defineConfig({
     alias: {
       'mermaid': 'mermaid/dist/mermaid.esm.mjs',
     },
-  },
-  build:{
-    rollupOptions:{
-      output:{
-        manualChunks:{
-          'vue-vender':['vue'],
-          // 'library':['']
-        }
-      }
-    }
   }
 });
