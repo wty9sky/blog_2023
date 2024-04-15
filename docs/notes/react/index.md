@@ -22,8 +22,9 @@ showComment: false
 
 7. [实现TodoList检验MiniReact](./01-从零实现mini-react/07-实现TodoList检验mini-react)
 
-## NextJS
-
 
 ## React 通关秘籍
-1. [组件常用Hook&Hook闭包陷阱](./03-React秘籍/01-组件常用Hook&Hook闭包陷阱)
+1. [组件常用Hook&Hook闭包陷阱](./02-React秘籍/01-组件常用Hook&Hook闭包陷阱)
+
+
+## NextJS

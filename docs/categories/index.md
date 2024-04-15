@@ -49,21 +49,21 @@ showSidebar: true
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/notes/react/01-从零实现mini-react/04-vdom更新&update_children">从零实现mini-react(4)：vdom更新&update children </a>？
+        <a href="/notes/react/01-从零实现mini-react/04-vdom更新&update_children">从零实现mini-react(4)：vdom更新&update children </a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-04)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/notes/react/01-从零实现mini-react/03-统一提交&实现function_component">从零实现mini-react(3)：统一提交&实现function component</a>？
+        <a href="/notes/react/01-从零实现mini-react/03-统一提交&实现function_component">从零实现mini-react(3)：统一提交&实现function component</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-04)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/notes/react/01-从零实现mini-react/02-任务调度器&fiber架构">从零实现mini-react(2)：任务调度器&fiber架构</a>？
+        <a href="/notes/react/01-从零实现mini-react/02-任务调度器&fiber架构">从零实现mini-react(2)：任务调度器&fiber架构</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-03)</span>
     </li>
     <li>

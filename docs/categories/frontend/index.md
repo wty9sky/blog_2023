@@ -11,60 +11,60 @@ showSidebar: true
 
 ### 2024
 <ul>
-    <li> 
+<li> 
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(7)：总结</a>？
+        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(8)：总结</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-06)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(5)：实现TodoList</a>？
+        <a href="/notes/react/01-从零实现mini-react/07-实现TodoList检验mini-react">从零实现mini-react(7)：07-实现TodoList检验mini-react</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-06)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(5)：实现useEffect</a>？
+        <a href="/notes/react/01-从零实现mini-react/06-实现useEffect">从零实现mini-react(6)：实现useEffect</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-05)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(5)：实现useState</a>？
+        <a href="/notes/react/01-从零实现mini-react/05-实现useState">从零实现mini-react(5)：实现useState</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-05)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(4)：vdom更新&update children </a>？
+        <a href="/notes/react/01-从零实现mini-react/04-vdom更新&update_children">从零实现mini-react(4)：vdom更新&update children </a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-04)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(3)：统一提交&实现function component</a>？
+        <a href="/notes/react/01-从零实现mini-react/03-统一提交&实现function_component">从零实现mini-react(3)：统一提交&实现function component</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-04)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/02-任务调度器&fiber架构">从零实现mini-react(2)：任务调度器&fiber架构</a>？
+        <a href="/notes/react/01-从零实现mini-react/02-任务调度器&fiber架构">从零实现mini-react(2)：任务调度器&fiber架构</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-03)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/develop/notes/react/01-实现最简mini-react">从零实现mini-react(1)：实现最简mini-react</a>？
+        <a href="/notes/react/01-从零实现mini-react/01-实现最简mini-react">从零实现mini-react(1)：实现最简mini-react</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-03)</span>
     </li>
     <li>
