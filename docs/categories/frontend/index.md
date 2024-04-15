@@ -29,14 +29,14 @@ showSidebar: true
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/notes/react/01-从零实现mini-react/06-实现useEffect">从零实现mini-react(6)：实现useEffect</a>？
+        <a href="/notes/react/01-从零实现mini-react/06-实现useEffect">从零实现mini-react(6)：实现useEffect</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-05)</span>
     </li>
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
-        <a href="/notes/react/01-从零实现mini-react/05-实现useState">从零实现mini-react(5)：实现useState</a>？
+        <a href="/notes/react/01-从零实现mini-react/05-实现useState">从零实现mini-react(5)：实现useState</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-05)</span>
     </li>
     <li>
