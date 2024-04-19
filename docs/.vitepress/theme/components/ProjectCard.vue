@@ -166,13 +166,13 @@ const props = withDefaults(defineProps<Props>(), {});
                     class="dark:text-gray-500 relative z-40 flex items-center text-zinc-500 transition hover:-translate-y-0.5 hover:text-lime-600 dark:text-zinc-200 dark:hover:text-lime-400"
                   >
                     <icon-github />
-                    <span class="mx-2">{{ url.url }}</span>
+                    <span class="mx-2">{{ url.name }}</span>
                   </span>
                 </a>
               </span>
             </div>
           </div>
-          <div class="">
+          <!-- <div class="">
             <a
               v-if="props.project.log"
               :href="props.project.log"
@@ -180,7 +180,7 @@ const props = withDefaults(defineProps<Props>(), {});
               >项目心得
               <icon-double-right />
             </a>
-          </div>
+          </div> -->
         </div>
       </div>
     </a-modal>

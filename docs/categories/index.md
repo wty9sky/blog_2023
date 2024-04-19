@@ -11,19 +11,22 @@ showSidebar: true
 <br>
 
 
-> 本博客最早一篇文章创建于 2020 年 12 月，当时同时在开发两个项目，一个是防疫平台，一个是教育机构CRM平台，然后当时是在语雀平台记录下来的开发想法，也是第一篇技术日志。后来陆陆续续在语雀上更新了一些学习记录，但是都没有搭建博客。<br>2021 年 3 月，第一次了解了VuePress，将语雀的文章迁移到了VuePress，简单的记录了自己的开发和学习记录。<br>2023年，基于VitePress搭建了博客，并开始记录自己的学习笔记。
+> 本博客最早一篇文章创建于 2020 年 12 月，当时同时在开发两个项目，一个是防疫平台，一个是教育机构CRM平台，然后当时是在语雀平台记录下来的开发想法，也是第一篇技术日志。后来陆陆续续在语雀上更新了一些学习记录，但是都没有搭建博客。
+> 2021 年 3 月，第一次了解了VuePress，将语雀的文章迁移到了VuePress，简单的记录了自己的开发和学习记录。
+> 因为忘记了VuePress对应的账号的密码，所以重新搭建了博客，根据一些记忆混元了Vuepress阶段的一些学习记录。
+> 2023年，基于VitePress搭建了博客，并开始记录自己的学习笔记和开发日志&心得。
 
 
 
 ### 2024
 <ul>
-    <li> 
+    <!-- <li> 
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
         <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(8)：总结</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-06)</span>
-    </li>
+    </li> -->
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
@@ -73,13 +76,13 @@ showSidebar: true
         <a href="/notes/react/01-从零实现mini-react/01-实现最简mini-react">从零实现mini-react(1)：实现最简mini-react</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-03)</span>
     </li>
-    <li>
+    <!-- <li>
         <a href="/develop/editor/">
             <a-tag color="orange" class="mx-[5px]">开发日志</a-tag>
         </a>
         <a href="/develop/editor/01-从零开发L0级富文本编辑器/02-从零实现简单的L0级富文本编辑器">从零实现L0级富文本编辑器</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-02)</span>
-    </li>
+    </li> -->
     <li>
         <a href="/develop/editor/">
             <a-tag color="orange" class="mx-[5px]">开发日志</a-tag>
@@ -87,13 +90,13 @@ showSidebar: true
         <a href="/develop/editor/01-从零开发L0级富文本编辑器/01-实现简单的富文本输入框">实现简单的富文本输入框</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-03-28)</span>
     </li>
-    <li>
+    <!-- <li>
         <a href="/categories/frontend/">
             <a-tag color="blue" class="mx-[5px]">前端</a-tag>
         </a>
-        <a href="/categories/frontend/2023/05/12/手写Promise">Vite实现原理与简单实现Vite</a>？
+        <a href="/categories/frontend/2023/05/12/手写Promise">Vite实现原理&简单实现Vite</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-01-05)</span>
-    </li>
+    </li> -->
 </ul>
 
 ### 2023
@@ -109,10 +112,10 @@ showSidebar: true
         <a href="/categories/frontend/">
             <a-tag color="blue" class="mx-[5px]">前端</a-tag>
         </a>
-        <a href="/categories/frontend/2023/05/12/手写Promise">VueRouter原理挖掘机</a>？
-        <span class="text-gray-500 text-xs ml-[10px]">(2023-05-12)</span>
+        <a href="/categories/frontend/2023/08/23/VueRouter原理挖掘机">VueRouter原理挖掘机</a>
+        <span class="text-gray-500 text-xs ml-[10px]">(2023-08-23)</span>
     </li>
-    <li>
+    <!-- <li>
         <a href="/categories/frontend/">
             <a-tag color="blue" class="mx-[5px]">前端</a-tag>
         </a>
@@ -125,7 +128,7 @@ showSidebar: true
         </a>
         <a href="/categories/frontend/2023/05/12/手写Promise">浏览器工作原理与实践</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2023-03-12)</span>
-    </li>
+    </li> -->
 </ul>
 
 

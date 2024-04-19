@@ -10,14 +10,15 @@ showSidebar: true
 # 前端开发
 
 ### 2024
+
 <ul>
-<li> 
+<!-- <li> 
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
         </a>
         <a href="/develop/notes/react/10-MiniReact学习总结">从零实现mini-react(8)：总结</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-06)</span>
-    </li>
+    </li> -->
     <li>
         <a href="/notes/">
             <a-tag color="#ffb400" class="mx-[5px]">学习笔记</a-tag>
@@ -67,13 +68,13 @@ showSidebar: true
         <a href="/notes/react/01-从零实现mini-react/01-实现最简mini-react">从零实现mini-react(1)：实现最简mini-react</a>
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-03)</span>
     </li>
-    <li>
+    <!-- <li>
         <a href="/develop/editor/">
             <a-tag color="orange" class="mx-[5px]">开发日志</a-tag>
         </a>
         <a href="/develop/editor/01-从零开发L0级富文本编辑器/02-从零实现简单的L0级富文本编辑器">从零实现L0级富文本编辑器</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2024-04-02)</span>
-    </li>
+    </li> -->
     <li>
         <a href="/develop/editor/">
             <a-tag color="orange" class="mx-[5px]">开发日志</a-tag>
@@ -91,6 +92,7 @@ showSidebar: true
 </ul>
 
 ### 2023
+
 <ul>
     <li>
         <a href="/categories/frontend/">
@@ -99,7 +101,7 @@ showSidebar: true
         <a href="/categories/frontend/2023/05/12/手写Promise">VueRouter原理挖掘机</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2023-05-12)</span>
     </li>
-    <li>
+    <!-- <li>
         <a href="/categories/frontend/">
             <a-tag color="blue" class="mx-[5px]">前端</a-tag>
         </a>
@@ -112,11 +114,11 @@ showSidebar: true
         </a>
         <a href="/categories/frontend/2023/05/12/手写Promise">浏览器工作原理与实践</a>？
         <span class="text-gray-500 text-xs ml-[10px]">(2023-03-12)</span>
-    </li>
+    </li> -->
 </ul>
 
-
 ### 2022
+
 <ul>
     <li>
         <a href="/categories/frontend/">
@@ -126,7 +128,6 @@ showSidebar: true
         <span class="text-gray-500 text-xs ml-[10px]">(2023-05-12)</span>
     </li>
 </ul>
-
 
 ### 2021
 
@@ -146,5 +147,3 @@ showSidebar: true
         <span class="text-gray-500 text-xs ml-[10px]">(2022-10-23)</span>
     </li> 
 </ul>
-
-

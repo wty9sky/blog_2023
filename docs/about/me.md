@@ -28,6 +28,8 @@ showComment: false
 - 👋 你好, 我是九天
 - 🔭 全栈开发
 - 📫 我的邮箱: [xmsn2014@126.com](mailto:xmsn2014@126.com)
+- 🌱 正在学习: TypeScript, Vue3, React, Node.js, Electron, 微信小程序
+- 📚 我的简历: [九天-个人简历](https://wty9sky.github.io/resume/)
 <!-- - 📖 My motto: “东隅已逝，桑榆非晚。” -->
 
 ---

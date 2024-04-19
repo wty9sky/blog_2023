@@ -5,6 +5,7 @@ export interface WebUrl {
 }
 
 export interface OpenSourceUrl {
+  name?:string;
   url: string;
   type?: "github";
 }
