@@ -1397,11 +1397,11 @@ export default {
 };
 ```
 
-假如，现在我们在浏览器的地址栏中输入了：http://localhost:8080/#/about 地址，
+假如，现在我们在浏览器的地址栏中输入了：`http://localhost:8080/#/about` 地址，
 
 是没有父组件，那么 depth 属性的值为 0，这时候获取的第一个组件然后进行渲染。
 
-如果地址栏的内容为：http://localhost:8080/#/about/users 这时候有子组件。对应的获取对应的父组件内容，开始进行循环。
+如果地址栏的内容为：`http://localhost:8080/#/about/users `这时候有子组件。对应的获取对应的父组件内容，开始进行循环。
 
 的属性\_route.
 
@@ -1639,10 +1639,10 @@ export default {
 };
 ```
 
-假如，现在我们在浏览器的地址栏中输入了：http://localhost:8080/#/about 地址，
+假如，现在我们在浏览器的地址栏中输入了：`http://localhost:8080/#/about` 地址，
 
 是没有父组件，那么 depth 属性的值为 0，这时候获取的第一个组件然后进行渲染。
 
-如果地址栏的内容为：http://localhost:8080/#/about/users 这时候有子组件。对应的获取对应的父组件内容，开始进行循环。
+如果地址栏的内容为：`http://localhost:8080/#/about/users` 这时候有子组件。对应的获取对应的父组件内容，开始进行循环。
 
 在循环的时候，做了一个判断，判断的条件就是当前的父组件必须为:RouterView 组件（子组件中 router-view 与父组件中的 router-view 构成了父子关系），才让 depth 加 1，然后取出子组件进行渲染。
