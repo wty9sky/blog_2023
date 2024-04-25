@@ -153,16 +153,16 @@ showComment: false
 
 # 技能清单
 
-- Web 开发：HTML/CSS/JavaScript/TypeScript/ES6
+- Web 开发：HTML/CSS/JavaScript/TypeScript/ES6+
 - Web 框架：Vue/React
 - 前端工具：Vite/Rollup/Webpack
 - 后端开发：Node.js/Python/Golang
-- 后端框架：Koa/Express/Nest/fastapi
+- 后端框架：Koa/Express/Nest/fastapi/fastify/Flask/Gin
 - App开发：Flutter/Uniapp/ReactNative/Electron/Swift/鸿蒙开发/Taro
 - 数据库相关：MySQL/SQLite
 - 版本管理、文档和自动化部署工具：Svn/Git/Vitepress
 - 跨端开发：小程序开发/跨端应用开发/独立组件
-- 运维：Linux/Docker
+- 运维：Linux/Docker/K8s/Nginx
 
 ---
 
