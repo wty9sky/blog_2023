@@ -7,7 +7,7 @@ showComment: false
 ---
 
 <!-- <div>个人简历下载</div> -->
-<a href="http://files.swdwiki.com/tos-cn-i-8vrofckkw9/wty/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91_%E7%8E%8B%E5%A4%A9%E6%B4%8B.pdf" target="_blank" class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
+<a href="./public/file/前端开发_王天洋.pdf" target="_blank" class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
 <icon-file-pdf :size="16" />
 <span class="text-[12px]">简历附件</span>
 <icon-download :size="14" />
@@ -28,7 +28,6 @@ showComment: false
 - Github（个人）：https://github.com/wty9sky
 
 - 期望职位：前端工程师、全栈工程师
-- 期望城市：北京、杭州、深圳
 
 # 工作经历
 
