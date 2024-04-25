@@ -7,7 +7,7 @@ showComment: false
 ---
 
 <!-- <div>个人简历下载</div> -->
-<a href="./public/file/前端开发_王天洋.pdf" target="_blank" class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
+<a href="../public/file/前端开发_王天洋.pdf" target="_blank" class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
 <icon-file-pdf :size="16" />
 <span class="text-[12px]">简历附件</span>
 <icon-download :size="14" />

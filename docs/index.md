@@ -13,7 +13,7 @@ hero:
     alt: Logo
   actions:
     - theme: brand
-      text: 快速开始
+      text: 我的文章
       link: /categories/index
     - theme: alt
       text: 在 GitHub 查看
