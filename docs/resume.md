@@ -7,11 +7,11 @@ showComment: false
 ---
 
 <!-- <div>个人简历下载</div> -->
-<a href="../public/file/前端开发_王天洋.pdf" target="_blank" class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
-<icon-file-pdf :size="16" />
-<span class="text-[12px]">简历附件</span>
-<icon-download :size="14" />
-</a>
+<div class="flex flex-row absolute top-[0px] right-[20px] items-center text-gray-500 decoration-0 z-[5] cursor-pointer">
+
+[<div><icon-file-pdf :size="16" />个人简历</div>](./public/file/前端开发_王天洋.pdf)
+
+</div>
 
 # 联系方式
 
@@ -31,7 +31,8 @@ showComment: false
 
 # 工作经历
 
-## 浙江每日互动网络科技股份有限公司 （ 2022 年 1 月 ~ 2023 年 8 月 ）
+## 浙江每日互动网络科技股份有限公司
+<span class="text-base">2022 年 1 月 ~ 2023 年 8 月</span>
 
 - 负责方案调研、选型、项目架构设计与开发优化，制定业务开发规范；
 - 负责部门前端团队的基建设计与落地，搭建私有npm仓库，实现内部组件资产50+；
