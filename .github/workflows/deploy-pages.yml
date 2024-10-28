@@ -11,6 +11,21 @@ on:
   # 允许你从 Actions 选项卡手动运行此工作流程
   workflow_dispatch:
 
+  pull_request:
+    branches: [main, master]
+  # 定时执行，字段含义：分钟 小时 日 月 星期
+  # 注意：
+  # 1.采用的是 UTC 时间
+  #   即，你配置的 0 0 * * *（UTC）00:00 实际上是（GMT+0800）08:00
+  #   只有你配置为 00 16 * * *（UTC）16:00 实际上才是 GMT+0800）00:00
+  # 2.官方声明：schedule 事件在 GitHub Actions 工作流运行期间负载过高时可能会延迟。 高负载时间包括每小时的开始时间。 为了降低延迟的可能性，建议将您的工作流程安排在不同时间运行。
+  #   例如：笔者之前设定的定时规则为 0 0 * * *（UTC），实际（GMT+0800）执行时间通常在 9:10 ~ 10:00，甚至会出现在 10:00 之后执行的情况
+  # 3.建议不只是定时执行的时候注意时间，自己 push 时也注意时间，早点休息
+  #   例如：笔者多次亲身经历，凌晨时间 pages build and deployment 任务大概能持续 8 分钟的 Current status: deployment_queued 状态，
+  #        即使能进入 Current status: deployment_in_progress 和 Current status: syncing_files 状态，如果文件多点，没一会儿就 Error: Timeout reached, aborting! 超时失败了
+  schedule:
+    - cron: 30 17 * * *
+
 # 设置 GITHUB_TOKEN 的权限，以允许部署到 GitHub Pages
 permissions:
   contents: read
@@ -32,9 +47,15 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # 如果未启用 lastUpdated，则不需要
+      - name: Git Configuration
+        run: |
+          git config --global core.quotePath false
+          git config --global core.autocrlf false
+          git config --global core.safecrlf true
+          git config --global core.ignorecase false
       - uses: pnpm/action-setup@v3 # 如果使用 pnpm，请取消此区域注释
         with:
-          version: 9
+          version: latest
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -50,16 +71,9 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: docs/.vitepress/dist
-
-  # 部署工作
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: Deploy GitHub Pages
         uses: actions/deploy-pages@v4
+        with:
+          branch: pages
+          folder: docs/.vitepress/dist
+          github_token: ${{ secrets.GH_TOKEN }}
