@@ -1,5 +1,11 @@
 name: Deploy Pages
 
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 on:
   # 推送时执行
   push:
@@ -29,7 +35,7 @@ jobs:
     steps:
       # 1、检出源码
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # 默认只拉取分支最近一次的 commit，可能会导致一些文章的 GitInfo 变量无法获取，设为 0 代表拉取所有分支所有提交
           fetch-depth: 0
@@ -43,26 +49,38 @@ jobs:
           git config --global core.ignorecase false
       # 3、安装 PNPM
       - name: Setup PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
           version: latest
       # 4、安装 Node 环境
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 21
           registry-url: https://registry.npmjs.org
           cache: pnpm
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
       # 5、安装依赖
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
       # 6、打包
       - name: Build
         run: pnpm build
-      # 7、部署 GitHub Pages
-      - name: Deploy GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          branch: pages
-          folder: docs/.vitepress/dist
-          github_token: ${{ secrets.GH_TOKEN }}
+          path: docs/.vitepress/dist
+
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
