@@ -1,11 +1,5 @@
 name: Deploy Pages
 
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 on:
   # 推送时执行
   push:
