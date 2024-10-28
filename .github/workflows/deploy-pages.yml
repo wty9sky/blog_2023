@@ -1,11 +1,5 @@
 name: Deploy Pages
 
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 on:
   # 推送时执行
   push:
@@ -58,7 +52,6 @@ jobs:
         with:
           node-version: 21
           cache: pnpm
-          github_token: ${{ secrets.GH_TOKEN }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       # 5、安装依赖
