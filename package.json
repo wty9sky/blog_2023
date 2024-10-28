@@ -23,7 +23,7 @@
     "tailwindcss": "^3.3.3",
     "unplugin-vue-components": "^0.24.1",
     "vite": "^4.4.8",
-    "vitepress": "1.0.0-rc.40",
+    "vitepress": "1.4.1",
     "vitepress-plugin-mermaid": "2.0.8",
     "vue": "^3.3.4"
   },
